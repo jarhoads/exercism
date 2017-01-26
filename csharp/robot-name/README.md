@@ -1,3 +1,8 @@
+# Notes about my solution
+
+This one was deceptively tricky. It seemed easy until the random names came back the same and the tests failed.
+I had to read about random number generation and why it should be static so it doesn't get seeded to the same number.
+
 # Robot Name
 
 Write a program that manages robot factory settings.

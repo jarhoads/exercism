@@ -1,3 +1,29 @@
+# Notes about my solution
+I added the following tests to make sure the client doesn't have access to the internal roster and grade list:
+
+```csharp
+    [Ignore("Remove to run test")]
+    [Test]
+    public void Should_not_have_access_to_roster()
+    {
+        school.Roster[3] = new List<string> { "Student" };
+         Assert.That(school.Grade(3), Is.EqualTo(new List<string>()));
+    }
+
+    [Ignore("Remove to run test")]
+    [Test]
+    public void Should_not_access_grade_list()
+    {
+        school.Add("Blair", 2);
+        school.Add("James", 2);
+        school.Add("Paul", 2);
+        var students = school.Grade(2);
+        students.Add("Student");
+        var expected = new List<string> { "Blair", "James", "Paul" };
+        Assert.That(school.Roster[2], Is.EqualTo(expected));
+    }
+```
+
 # Grade School
 
 Write a small archiving program that stores students' names along with the grade that they are in.

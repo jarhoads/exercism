@@ -1,3 +1,10 @@
+# Notes about my solution
+
+I noticed I didn't have to use ```ValidNumber``` if I used ```ParseNumber``` first.
+I also set some private variables so the ```Substring``` method isn't called every time one of the class methods is called or ```AreaCode``` is accessed.
+I'm not sure how much of an overhead ```Substring``` that would cause on these strings since they're pretty small, but I'm doing it anyway.
+I guess it would also depend on how the class will be used.
+
 # Phone Number
 
 Write a program that cleans up user-entered phone numbers so that they can be sent SMS messages.

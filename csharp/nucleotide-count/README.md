@@ -1,3 +1,7 @@
+# Notes about my solution
+
+ Formatted the if statement in Count() so it isn't all on one line.
+
 # Nucleotide Count
 
 Given a DNA string, compute how many times each nucleotide occurs in the string.
