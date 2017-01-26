@@ -1,3 +1,13 @@
+# Notes about my solution
+
+I decided to make these static class variables since they're the same for every instance and only need to be created once.
+```java
+    private final static String NOTHING = "Fine. Be that way!";
+    private final static String QUESTION = "Sure.";
+    private final static String YELLING = "Whoa, chill out!";
+    private final static String OTHER = "Whatever.";
+```
+
 # Bob
 
 Bob is a lackadaisical teenager. In conversation, his responses are very limited.
