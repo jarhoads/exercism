@@ -1,7 +1,7 @@
 var Pangram = function(phrase){
-    var lower_letters = "abcdefghijklmnopqrstuvwxyz";
+    var lower = "abcdefghijklmnopqrstuvwxyz";
 
-    var isLetter = function(c){ return lower_letters.indexOf(c) >= 0; }
+    var isLetter = function(c){ return lower.indexOf(c) >= 0; }
     var unique = function(acc, curr, idx, arr){
         return acc + ((arr.slice(idx+1).indexOf(curr) >= 0) ? "" : curr);
     };
@@ -12,7 +12,7 @@ var Pangram = function(phrase){
                         .reduce(unique,"");
 
     this.isPangram = function(){
-        return letters.length === lower_letters.length;
+        return letters.length === lower.length;
     };
 
 };
